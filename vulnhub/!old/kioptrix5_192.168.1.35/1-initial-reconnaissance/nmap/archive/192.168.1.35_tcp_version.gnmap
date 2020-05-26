@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sat Jan 11 13:04:05 2020 as: nmap -sS -sV -sC -O -p80,8080 -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.35_tcp_version 192.168.1.35
+# Ports scanned: TCP(2;80,8080) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Status: Up
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Ports: 80/open/tcp//http//Apache httpd 2.2.21 ((FreeBSD) mod_ssl|2.2.21 OpenSSL|0.9.8q DAV|2 PHP|5.3.8)/, 8080/open/tcp//http//Apache httpd 2.2.21 ((FreeBSD) mod_ssl|2.2.21 OpenSSL|0.9.8q DAV|2 PHP|5.3.8)/	OS: Linux 2.6.18 - 2.6.22
+# Nmap done at Sat Jan 11 13:04:34 2020 -- 1 IP address (1 host up) scanned in 28.60 seconds

@@ -1,0 +1,11 @@
+Looking up status of 192.168.1.104
+	KIOPTRIX        <00> -         B <ACTIVE> 
+	KIOPTRIX        <03> -         B <ACTIVE> 
+	KIOPTRIX        <20> -         B <ACTIVE> 
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE> 
+	MYGROUP         <00> - <GROUP> B <ACTIVE> 
+	MYGROUP         <1d> -         B <ACTIVE> 
+	MYGROUP         <1e> - <GROUP> B <ACTIVE> 
+
+	MAC Address = 00-00-00-00-00-00
+

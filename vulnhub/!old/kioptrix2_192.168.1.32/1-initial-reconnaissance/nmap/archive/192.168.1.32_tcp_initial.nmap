@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Fri Jan 10 19:50:43 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.32_tcp_initial 192.168.1.32
+Nmap scan report for 192.168.1.32
+Host is up, received arp-response (0.0020s latency).
+Not shown: 65528 closed ports
+Reason: 65528 resets
+PORT     STATE SERVICE REASON
+22/tcp   open  ssh     syn-ack ttl 64
+80/tcp   open  http    syn-ack ttl 64
+111/tcp  open  rpcbind syn-ack ttl 64
+443/tcp  open  https   syn-ack ttl 64
+631/tcp  open  ipp     syn-ack ttl 64
+812/tcp  open  unknown syn-ack ttl 64
+3306/tcp open  mysql   syn-ack ttl 64
+MAC Address: 00:0C:29:C7:BD:E1 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri Jan 10 19:50:48 2020 -- 1 IP address (1 host up) scanned in 5.09 seconds

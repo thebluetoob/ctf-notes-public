@@ -1,0 +1,1 @@
+getting file \ls of size 274 as ls (133.8 KiloBytes/sec) (average 133.8 KiloBytes/sec)

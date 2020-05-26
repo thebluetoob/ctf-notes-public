@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Mon Nov 25 20:02:16 2019 as: nmap -sS -sV -sC -O -p22,80,111,139,443,32768 -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.104_tcp_version 192.168.1.104
+# Ports scanned: TCP(6;22,80,111,139,443,32768) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.104 ()	Status: Up
+Host: 192.168.1.104 ()	Ports: 22/open/tcp//ssh//OpenSSH 2.9p2 (protocol 1.99)/, 80/open/tcp//http//Apache httpd 1.3.20 ((Unix)  (Red-Hat|Linux) mod_ssl|2.8.4 OpenSSL|0.9.6b)/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd (workgroup: MYGROUP)/, 443/open/tcp//ssl|https//Apache|1.3.20 (Unix)  (Red-Hat|Linux) mod_ssl|2.8.4 OpenSSL|0.9.6b/, 32768/open/tcp//status//1 (RPC #100024)/	OS: Linux 2.4.9 - 2.4.18 (likely embedded)	Seq Index: 196	IP ID Seq: All zeros
+# Nmap done at Mon Nov 25 20:04:23 2019 -- 1 IP address (1 host up) scanned in 126.92 seconds

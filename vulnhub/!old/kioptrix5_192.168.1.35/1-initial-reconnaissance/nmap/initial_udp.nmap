@@ -1,0 +1,7 @@
+# Nmap 7.80 scan initiated Sat Jan 11 13:08:41 2020 as: nmap -sU -T4 --open --reason -oA nmap/initial_udp 192.168.1.35
+Nmap scan report for kioptrix2014.localdomain (192.168.1.35)
+Host is up, received arp-response (0.00026s latency).
+All 1000 scanned ports on kioptrix2014.localdomain (192.168.1.35) are open|filtered because of 1000 no-responses
+MAC Address: 00:0C:29:CB:1D:15 (VMware)
+
+# Nmap done at Sat Jan 11 13:09:03 2020 -- 1 IP address (1 host up) scanned in 21.67 seconds

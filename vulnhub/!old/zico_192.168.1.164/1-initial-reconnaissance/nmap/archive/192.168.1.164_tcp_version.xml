@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri May 15 18:01:33 2020 as: nmap -sS -sV -sC -O -p22,80,111,58696 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.164_tcp_version 192.168.1.164 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -sC -O -p22,80,111,58696 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.164_tcp_version 192.168.1.164" start="1589529693" startstr="Fri May 15 18:01:33 2020" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="22,80,111,58696"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1589529694"/>
+<taskend task="NSE" time="1589529694"/>
+<taskbegin task="NSE" time="1589529694"/>
+<taskend task="NSE" time="1589529694"/>
+<taskbegin task="ARP Ping Scan" time="1589529694"/>
+<taskend task="ARP Ping Scan" time="1589529694" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1589529694"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1589529694"/>
+<taskbegin task="SYN Stealth Scan" time="1589529694"/>
+<taskend task="SYN Stealth Scan" time="1589529694" extrainfo="4 total ports"/>
+<taskbegin task="Service scan" time="1589529694"/>
+<taskend task="Service scan" time="1589529705" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1589529706"/>
+<taskend task="NSE" time="1589529706"/>
+<taskbegin task="NSE" time="1589529706"/>
+<taskend task="NSE" time="1589529706"/>
+<host starttime="1589529694" endtime="1589529706"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.164" addrtype="ipv4"/>
+<address addr="00:0C:29:2B:AD:8D" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="zico.localdomain" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="5.9p1 Debian 5ubuntu1.10" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 68:60:de:c2:2b:c6:16:d8:5b:88:be:e3:cc:a1:25:75 (DSA)&#xa;  2048 50:db:75:ba:11:2f:43:c9:ab:14:40:6d:7f:a1:ee:e3 (RSA)&#xa;  256 11:5d:55:29:8a:77:d8:08:b4:00:9b:a3:61:93:fe:e5 (ECDSA)"><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJwR6q4VerUDe7bLXRL6ZPTXj5FY66he+WWlRSoQppwDLqrTG73Pa9qUHMDFb1LXN1qgg0p0lyfqvm8ZeN+98rbT0JW6+Wqa7v0K+N82xf87fVkJcXAuU/A8OGR9eVMZmWsIOpabZexd5CHYgLO3k4YpPSdxc6S4zJcOGwXVnmGHAAAAFQDHjsPg0rmkbquTJRdlEZBVJe9+3QAAAIBjYIAiGvKhmJfzDjVfzlxRD1ET7ZhSoMDxU0KadwXQP1uBdlYVEteJQpUTEsA+7kFH7xhtZ/zbK2afEFHriAphTJmz8GqkIR5CJXh3dZspdk2MHCgxkXl5G/iVPLR9UShN+nsAVxfm0gffCqbqZu3Ridt3JwTXQbiDfXO/a6T/eQAAAIEAlsW/i/dUuFbRVO2zaAKwL/CFWT19Al7+njszC5FCJ2deggmF/NIKJUbJwkRZkwL4PY1HYj2xqn7ImhPSyvdCd+IFdw73Pndnjv0luDc8i/a4JUEfna4rzXt1Y5c24J1pEoKA05VicyCBD2z6TodRJEVEFSsa1s8s2p9x6LxwsDw=</elem>
+<elem key="fingerprint">6860dec22bc616d85b88bee3cca12575</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="bits">1024.0</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDZt46W9slSN3Y6D2f931rijUPCEewhQWmBfGhybuF4qLftfJMuyFcREZkG6UretVI8ZnQn/OMDgbf2DYMzKsRLnz7W5cGy1Mt1pWoG0iCgi2xHzLqOqPYo4mP9/hdZT6pANXapETT55yx8sHAYLAa9NK5Dtyv+QNQ2dUUb1wUTCqgYffLVDgoHvNNDwCwB6biJf6uopqfg2KXvAzcqSa6oaRChJOXjFlM08HebMwkMSzrOXjWbXhFsONy5JuDf3WztCtLMsFrVRHTdDwTh7uL2UQ8Qcky+kP6Wd7G8NlW5RxubYIFpAM0u2SsQIjYOxz+eOfQ8GE3WjvaIBqX05gat</elem>
+<elem key="fingerprint">50db75ba112f43c9ab14406d7fa1eee3</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048.0</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFxsiWE3WImfJcjiWS5asOVoMsn+0gFLU5AgPNs2ATokB7kw00IsB0YGrqClwYNauRRddkYMsi0icJSR60mYNSo=</elem>
+<elem key="fingerprint">115d55298a77d808b4009ba36193fee5</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.22 (Ubuntu)"><elem>Apache/2.2.22 (Ubuntu)</elem>
+</script><script id="http-title" output="Zico&apos;s Shop"><elem key="title">Zico&apos;s Shop</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100024  1          40055/udp  status&#xa;  100024  1          58696/tcp  status&#xa;"><table key="100024">
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">40055</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">58696</elem>
+</table>
+</table>
+<table key="100000">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="58696"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="32863"/>
+<osmatch name="Linux 2.6.32 - 3.5" accuracy="100" line="56585">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="17179850" lastboot="Tue Oct 29 22:50:56 2019"/>
+<distance value="1"/>
+<tcpsequence index="245" difficulty="Good luck!" values="7999F5FB,A3B29C6D,86AC39C5,95C04733,7287ADC6,8EF24EE2"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFFEC60,FFFFEC79,FFFFEC92,FFFFECAB,FFFFECC4,FFFFECDE"/>
+<times srtt="418" rttvar="220" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1589529706"/>
+<taskend task="NSE" time="1589529706"/>
+<taskbegin task="NSE" time="1589529706"/>
+<taskend task="NSE" time="1589529706"/>
+<runstats><finished time="1589529706" timestr="Fri May 15 18:01:46 2020" elapsed="13.24" summary="Nmap done at Fri May 15 18:01:46 2020; 1 IP address (1 host up) scanned in 13.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

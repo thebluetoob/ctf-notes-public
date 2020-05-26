@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sat Jan 11 13:02:37 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.35_tcp_initial 192.168.1.35
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Status: Up
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Ports: 80/open/tcp//http///, 8080/open/tcp//http-proxy///
+# Nmap done at Sat Jan 11 13:04:05 2020 -- 1 IP address (1 host up) scanned in 87.80 seconds

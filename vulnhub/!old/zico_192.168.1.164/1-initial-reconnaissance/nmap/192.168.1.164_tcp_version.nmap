@@ -1,0 +1,38 @@
+# Nmap 7.70 scan initiated Fri May 15 18:01:33 2020 as: nmap -sS -sV -sC -O -p22,80,111,58696 -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.164_tcp_version 192.168.1.164
+Nmap scan report for zico.localdomain (192.168.1.164)
+Host is up, received arp-response (0.00042s latency).
+
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 64 OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 68:60:de:c2:2b:c6:16:d8:5b:88:be:e3:cc:a1:25:75 (DSA)
+|   2048 50:db:75:ba:11:2f:43:c9:ab:14:40:6d:7f:a1:ee:e3 (RSA)
+|_  256 11:5d:55:29:8a:77:d8:08:b4:00:9b:a3:61:93:fe:e5 (ECDSA)
+80/tcp    open  http    syn-ack ttl 64 Apache httpd 2.2.22 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: Zico's Shop
+111/tcp   open  rpcbind syn-ack ttl 64 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100024  1          40055/udp  status
+|_  100024  1          58696/tcp  status
+58696/tcp open  status  syn-ack ttl 64 1 (RPC #100024)
+MAC Address: 00:0C:29:2B:AD:8D (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.5
+Uptime guess: 198.841 days (since Tue Oct 29 22:50:56 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=245 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 15 18:01:46 2020 -- 1 IP address (1 host up) scanned in 13.24 seconds

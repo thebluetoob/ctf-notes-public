@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov 25 20:02:11 2019 as: nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.104_tcp_initial 192.168.1.104 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.104_tcp_initial 192.168.1.104" start="1574672531" startstr="Mon Nov 25 20:02:11 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1574672531"/>
+<taskend task="ARP Ping Scan" time="1574672531" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1574672531"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1574672531"/>
+<taskbegin task="SYN Stealth Scan" time="1574672531"/>
+<taskend task="SYN Stealth Scan" time="1574672536" extrainfo="65535 total ports"/>
+<host starttime="1574672531" endtime="1574672536"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.104" addrtype="ipv4"/>
+<address addr="00:0C:29:19:58:B4" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65529">
+<extrareasons reason="resets" count="65529"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="32768"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="filenet-tms" method="table" conf="3"/></port>
+</ports>
+<times srtt="3119" rttvar="1179" to="100000"/>
+</host>
+<runstats><finished time="1574672536" timestr="Mon Nov 25 20:02:16 2019" elapsed="5.16" summary="Nmap done at Mon Nov 25 20:02:16 2019; 1 IP address (1 host up) scanned in 5.16 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

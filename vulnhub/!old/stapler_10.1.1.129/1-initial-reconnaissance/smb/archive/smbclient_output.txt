@@ -1,0 +1,15 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	kathy           Disk      Fred, What are we doing here?
+	tmp             Disk      All temporary files should be stored here
+	IPC$            IPC       IPC Service (red server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            RED

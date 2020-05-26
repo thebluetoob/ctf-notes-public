@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Nov  9 22:12:59 2019 as: nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/10.1.1.129_tcp_initial 10.1.1.129 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/10.1.1.129_tcp_initial 10.1.1.129" start="1573297979" startstr="Sat Nov  9 22:12:59 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1573297979"/>
+<taskend task="ARP Ping Scan" time="1573297979" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1573297979"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1573297979"/>
+<taskbegin task="SYN Stealth Scan" time="1573297979"/>
+<taskprogress task="SYN Stealth Scan" time="1573298010" percent="22.71" remaining="106" etc="1573298116"/>
+<taskprogress task="SYN Stealth Scan" time="1573298040" percent="58.83" remaining="43" etc="1573298083"/>
+<taskend task="SYN Stealth Scan" time="1573298067" extrainfo="65535 total ports"/>
+<host starttime="1573297979" endtime="1573298067"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.1.1.129" addrtype="ipv4"/>
+<address addr="00:0C:29:9D:60:45" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65523">
+<extrareasons reason="no-responses" count="65523"/>
+</extraports>
+<extraports state="closed" count="4">
+<extrareasons reason="resets" count="4"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="666"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="doom" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" method="table" conf="3"/></port>
+<port protocol="tcp" portid="12380"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<times srtt="336" rttvar="152" to="100000"/>
+</host>
+<runstats><finished time="1573298067" timestr="Sat Nov  9 22:14:27 2019" elapsed="88.00" summary="Nmap done at Sat Nov  9 22:14:27 2019; 1 IP address (1 host up) scanned in 88.00 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

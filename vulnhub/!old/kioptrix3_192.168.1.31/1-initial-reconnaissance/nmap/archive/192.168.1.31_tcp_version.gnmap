@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Jan  9 18:32:24 2020 as: nmap -sS -sV -sC -O -p22,80 -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.31_tcp_version 192.168.1.31
+# Ports scanned: TCP(2;22,80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.31 (kioptrix3.com)	Status: Up
+Host: 192.168.1.31 (kioptrix3.com)	Ports: 22/open/tcp//ssh//OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.8 ((Ubuntu) PHP|5.2.4-2ubuntu5.6 with Suhosin-Patch)/	OS: Linux 2.6.9 - 2.6.33	Seq Index: 186	IP ID Seq: All zeros
+# Nmap done at Thu Jan  9 18:32:32 2020 -- 1 IP address (1 host up) scanned in 7.98 seconds

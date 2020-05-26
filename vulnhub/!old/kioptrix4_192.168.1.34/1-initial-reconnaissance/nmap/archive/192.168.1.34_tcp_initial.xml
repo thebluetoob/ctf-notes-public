@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jan 10 20:40:52 2020 as: nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.34_tcp_initial 192.168.1.34 -->
+<nmaprun scanner="nmap" args="nmap -sS -p- -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.34_tcp_initial 192.168.1.34" start="1578649252" startstr="Fri Jan 10 20:40:52 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1578649252"/>
+<taskend task="ARP Ping Scan" time="1578649253" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1578649253"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1578649253"/>
+<taskbegin task="SYN Stealth Scan" time="1578649253"/>
+<taskend task="SYN Stealth Scan" time="1578649275" extrainfo="65535 total ports"/>
+<host starttime="1578649253" endtime="1578649275"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.34" addrtype="ipv4"/>
+<address addr="00:0C:29:29:B5:D6" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="39528">
+<extrareasons reason="resets" count="39528"/>
+</extraports>
+<extraports state="filtered" count="26003">
+<extrareasons reason="no-responses" count="26003"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="3042" rttvar="2699" to="100000"/>
+</host>
+<runstats><finished time="1578649275" timestr="Fri Jan 10 20:41:15 2020" elapsed="22.14" summary="Nmap done at Fri Jan 10 20:41:15 2020; 1 IP address (1 host up) scanned in 22.14 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

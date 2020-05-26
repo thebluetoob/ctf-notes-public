@@ -1,0 +1,15 @@
+# Nmap 7.80 scan initiated Fri Jan 10 20:40:52 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.34_tcp_initial 192.168.1.34
+Nmap scan report for 192.168.1.34
+Host is up, received arp-response (0.0030s latency).
+Not shown: 39528 closed ports, 26003 filtered ports
+Reason: 39528 resets and 26003 no-responses
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE      REASON
+22/tcp  open  ssh          syn-ack ttl 64
+80/tcp  open  http         syn-ack ttl 64
+139/tcp open  netbios-ssn  syn-ack ttl 64
+445/tcp open  microsoft-ds syn-ack ttl 64
+MAC Address: 00:0C:29:29:B5:D6 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri Jan 10 20:41:15 2020 -- 1 IP address (1 host up) scanned in 22.14 seconds

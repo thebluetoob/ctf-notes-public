@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Sat Jan 11 13:08:41 2020 as: nmap -sU -T4 --open --reason -oA nmap/initial_udp 192.168.1.35
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Status: Up
+Host: 192.168.1.35 (kioptrix2014.localdomain)	Status: Up
+# Nmap done at Sat Jan 11 13:09:03 2020 -- 1 IP address (1 host up) scanned in 21.67 seconds

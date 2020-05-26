@@ -1,0 +1,11 @@
+Looking up status of 10.1.1.129
+	RED             <00> -         H <ACTIVE> 
+	RED             <03> -         H <ACTIVE> 
+	RED             <20> -         H <ACTIVE> 
+	..__MSBROWSE__. <01> - <GROUP> H <ACTIVE> 
+	WORKGROUP       <00> - <GROUP> H <ACTIVE> 
+	WORKGROUP       <1d> -         H <ACTIVE> 
+	WORKGROUP       <1e> - <GROUP> H <ACTIVE> 
+
+	MAC Address = 00-00-00-00-00-00
+

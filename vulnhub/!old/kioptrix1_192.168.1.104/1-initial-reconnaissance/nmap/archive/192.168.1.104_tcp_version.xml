@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov 25 20:02:16 2019 as: nmap -sS -sV -sC -O -p22,80,111,139,443,32768 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.104_tcp_version 192.168.1.104 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -sC -O -p22,80,111,139,443,32768 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.104_tcp_version 192.168.1.104" start="1574672536" startstr="Mon Nov 25 20:02:16 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="6" services="22,80,111,139,443,32768"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1574672537"/>
+<taskend task="NSE" time="1574672537"/>
+<taskbegin task="NSE" time="1574672537"/>
+<taskend task="NSE" time="1574672537"/>
+<taskbegin task="NSE" time="1574672537"/>
+<taskend task="NSE" time="1574672537"/>
+<taskbegin task="ARP Ping Scan" time="1574672537"/>
+<taskend task="ARP Ping Scan" time="1574672537" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1574672537"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1574672537"/>
+<taskbegin task="SYN Stealth Scan" time="1574672537"/>
+<taskend task="SYN Stealth Scan" time="1574672537" extrainfo="6 total ports"/>
+<taskbegin task="Service scan" time="1574672537"/>
+<taskend task="Service scan" time="1574672551" extrainfo="6 services on 1 host"/>
+<taskbegin task="NSE" time="1574672552"/>
+<taskend task="NSE" time="1574672603"/>
+<taskbegin task="NSE" time="1574672603"/>
+<taskend task="NSE" time="1574672663"/>
+<taskbegin task="NSE" time="1574672663"/>
+<taskend task="NSE" time="1574672663"/>
+<host starttime="1574672537" endtime="1574672663"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.104" addrtype="ipv4"/>
+<address addr="00:0C:29:19:58:B4" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="2.9p2" extrainfo="protocol 1.99" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:2.9p2</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 b8:74:6c:db:fd:8b:e6:66:e9:2a:2b:df:5e:6f:64:86 (RSA1)&#xa;  1024 8f:8e:5b:81:ed:21:ab:c1:80:e1:57:a3:3c:85:c4:71 (DSA)&#xa;  1024 ed:4e:a9:4a:06:14:ff:15:14:ce:da:3a:80:db:e2:81 (RSA)"><table>
+<elem key="key">35 109482092953601530927446985143812377560925655194254170270380314520841776849335628258408994190413716152105684423280369467219093526740118507720167655934779634416983599247086840099503203800281526143567271862466057363705861760702664279290804439502645034586412570490614431533437479630834594344497670338190191879537</elem>
+<elem key="bits">1024</elem>
+<elem key="type">rsa1</elem>
+<elem key="fingerprint">b8746cdbfd8be666e92a2bdf5e6f6486</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAKtycvxuV/e7s2cN74HyTZXHXiBrwyiZe/PKT/inuT5NDSQTPsGiyJZU4gefPAsYKSw5wLe28TDlZWHAdXpNdwyn4QrFQBjwFR+8WbFiAZBoWlSfQPR2RQW8i32Y2P2V79p4mu742HtWBz0hTjkd9qL5j8KCUPDfY9hzDuViWy7PAAAAFQCY9bvq+5rs1OpY5/DGsGx0k6CqGwAAAIBVpBtIHbhvoQdN0WPe8d6OzTTFvdNRa8pWKzV1Hpw+e3qsC4LYHAy1NoeaqK8uJP9203MEkxrd2OoBJKn/8EXlKAco7vC1dr/QWae+NEkI1a38x0Ml545vHAGFaVUWkffHekjhR476Uq4N4qeLfFp5B+v+9flLxYVYsY/ymJKpNgAAAIEApyjrqjgX0AE4fSBFntGFWM3j5M3lc5jw/0qufXlHJu8sZG0FRf9wTI6HlJHHsIKHA7FZ33vGLq3TRmvZucJZ0l55fV2ASS9uvQRE+c8P6w72YCzgJN7v4hYXxnY4RiWvINjW/F6ApQEUJc742i6Fn54FEYAIy5goatGFMwpVq3Q=</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">8f8e5b81ed21abc180e157a33c85c471</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAvv8UUWsrO7+VCG/rTWY72jElft4WXfXGWybh141E8XnWxMCu+R1qdocxhh+4Clz8wO9beuZzG1rjlAD+XHiR3j2P+sw6UODeyBkuP24a+7V8P5nu9ksKD1fA83RyelgSgRJNQgPfFU3gngNno1yN6ossqkcMQTI1CY5nF6iYePs=</elem>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">ed4ea94a0614ff1514ceda3a80dbe281</elem>
+</table>
+</script><script id="sshv1" output="Server supports SSHv1">true</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="1.3.20" extrainfo="(Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:1.3.20</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b"><elem>Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</elem>
+</script><script id="http-title" output="Test Page for the Apache Web Server on Red Hat Linux"><elem key="title">Test Page for the Apache Web Server on Red Hat Linux</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" extrainfo="workgroup: MYGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="https" product="Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b" tunnel="ssl" method="probed" conf="10"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b"><elem>Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b</elem>
+</script><script id="http-title" output="400 Bad Request"><elem key="title">400 Bad Request</elem>
+</script><script id="ssl-date" output="2019-11-25T10:05:13+00:00; +1h01m50s from scanner time."><elem key="date">2019-11-25T10:05:13+00:00</elem>
+<elem key="delta">3710.0</elem>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_DES_64_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC4_64_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_DES_64_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC4_64_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="32768"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="32359"/>
+<osmatch name="Linux 2.4.9 - 2.4.18 (likely embedded)" accuracy="100" line="45701">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.4</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="380" lastboot="Mon Nov 25 19:58:03 2019"/>
+<distance value="1"/>
+<tcpsequence index="196" difficulty="Good luck!" values="7B834444,7B51FEE2,7BC3827F,7B788BF4,7B89BF26,7BB8E51D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="68FA,6904,690E,6918,6922,692C"/>
+<hostscript><script id="clock-skew" output="1h01m49s"><elem key="median">3709</elem>
+<elem key="stddev">0</elem>
+<elem key="mean">3709</elem>
+<elem key="count">1</elem>
+</script><script id="nbstat" output="NetBIOS name: KIOPTRIX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  KIOPTRIX&lt;00&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX&lt;03&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX&lt;20&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  MYGROUP&lt;00&gt;          Flags: &lt;group&gt;&lt;active&gt;&#xa;  MYGROUP&lt;1e&gt;          Flags: &lt;group&gt;&lt;active&gt;"/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="195" rttvar="62" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1574672663"/>
+<taskend task="NSE" time="1574672663"/>
+<taskbegin task="NSE" time="1574672663"/>
+<taskend task="NSE" time="1574672663"/>
+<taskbegin task="NSE" time="1574672663"/>
+<taskend task="NSE" time="1574672663"/>
+<runstats><finished time="1574672663" timestr="Mon Nov 25 20:04:23 2019" elapsed="126.92" summary="Nmap done at Mon Nov 25 20:04:23 2019; 1 IP address (1 host up) scanned in 126.92 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

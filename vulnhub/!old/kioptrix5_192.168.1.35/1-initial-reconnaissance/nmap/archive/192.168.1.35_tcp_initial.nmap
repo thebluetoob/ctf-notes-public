@@ -1,0 +1,13 @@
+# Nmap 7.80 scan initiated Sat Jan 11 13:02:37 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.35_tcp_initial 192.168.1.35
+Nmap scan report for kioptrix2014.localdomain (192.168.1.35)
+Host is up, received arp-response (0.00027s latency).
+Not shown: 65532 filtered ports, 1 closed port
+Reason: 65532 no-responses and 1 reset
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE    REASON
+80/tcp   open  http       syn-ack ttl 64
+8080/tcp open  http-proxy syn-ack ttl 64
+MAC Address: 00:0C:29:CB:1D:15 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Jan 11 13:04:05 2020 -- 1 IP address (1 host up) scanned in 87.80 seconds

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="/usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Jan 10 20:41:15 2020 as: nmap -sS -sV -sC -O -p22,80,139,445 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.34_tcp_version 192.168.1.34 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -sC -O -p22,80,139,445 -T4 -Pn -v -&#45;reason -&#45;open -&#45;stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.34_tcp_version 192.168.1.34" start="1578649275" startstr="Fri Jan 10 20:41:15 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="22,80,139,445"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1578649275"/>
+<taskend task="NSE" time="1578649275"/>
+<taskbegin task="NSE" time="1578649275"/>
+<taskend task="NSE" time="1578649275"/>
+<taskbegin task="NSE" time="1578649275"/>
+<taskend task="NSE" time="1578649275"/>
+<taskbegin task="ARP Ping Scan" time="1578649275"/>
+<taskend task="ARP Ping Scan" time="1578649275" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1578649275"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1578649275"/>
+<taskbegin task="SYN Stealth Scan" time="1578649275"/>
+<taskend task="SYN Stealth Scan" time="1578649275" extrainfo="4 total ports"/>
+<taskbegin task="Service scan" time="1578649275"/>
+<taskend task="Service scan" time="1578649286" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1578649288"/>
+<taskend task="NSE" time="1578649303"/>
+<taskbegin task="NSE" time="1578649303"/>
+<taskend task="NSE" time="1578649303"/>
+<taskbegin task="NSE" time="1578649303"/>
+<taskend task="NSE" time="1578649303"/>
+<host starttime="1578649275" endtime="1578649303"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.34" addrtype="ipv4"/>
+<address addr="00:0C:29:29:B5:D6" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1.2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 9b:ad:4f:f2:1e:c5:f2:39:14:b9:d3:a0:0b:e8:41:71 (DSA)&#xa;  2048 85:40:c6:d5:41:26:05:34:ad:f8:6e:f2:a7:6b:4f:0e (RSA)"><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJQxDWMK4xxdEEdMA0YQLblzXV5xx6slDUANQmyouzmobMxTcImV1OfY9vB2LUjJwSbtuPn/Ef7LCik29SLab6FD59QsJKz3tOfX1UZJ9FeoxPhoVsfk+LDM4FbQxo0pPYhlQadVHAicjUnONl5WaaUEYuelAoU36v2wOKKDe+kRAAAAFQDAmqYNY1Ou7o5qEfZx0e9+XNUJ2QAAAIAt6puNENxfFnl74pmuKgeQaZQCsPnZlSyTODcP961mwFvTMHWD4pQsg0j6GlPUZrXUCmeTcNqbUQQHei6l8U1zMO4xFYxVz2kkGhbQAa/FGd1r3TqKXu+jQxTmp7xvNBVHoT3rKPqcd12qtweTjlYKlcHgW5XL3mR1Nw91JrhMlAAAAIAWHQLIOjwyAFvUhjGqEVK1Y0QoCoNLGEFd+wcrMLjpZEz7/Ay9IhyuBuRbeR/TxjitcUX6CC58cF5KoyhyQytFH17ZMpegb9x29mQiAg4wK1MGOi9D8OU1cW/COd/E8LvrNLxMFllatLVscw/WXXTi8fFmOEzkGsaRKC6NiQhDlg==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">9bad4ff21ec5f23914b9d3a00be84171</elem>
+<elem key="bits">1024</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAQEApA/UX2iq4JYXncTEDfBoyJWguuDkWDvyw4HlLyc1UBT3Pn2wnYLYa0MjwkBtPilmf5X1zK1z3su7oBEcSEt6o7RzDEUbC1O6nRvY4oSKwBD0qLaIHM1V5CZ+YDtLneY6IriJjHJ0DgNyXalPbQ36VZgu20o9dH8ItDkjlZTxRHPE6RnPiD1aZSLo452LNU3N+/2M/ny7QMvIyPNkcojeZQWS7RRSDa2lEUw1X1ECL6zCMiWC0lhciZf5ieum9MnATTF3dgk4BnCq6dfdEvae0avSypMcs6no2CJ2j9PPoAQ1VWj/WlAZzEbfna9YQ2cx8sW/W/9GfKA5SuLFt1u0iQ==</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">8540c6d541260534adf86ef2a76b4f0e</elem>
+<elem key="bits">2048</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch"><elem>Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.0.28a" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="43717"/>
+<osmatch name="Linux 2.6.9 - 2.6.33" accuracy="100" line="59153">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="42949462" lastboot="Fri Aug 31 17:17:21 2018"/>
+<distance value="1"/>
+<tcpsequence index="206" difficulty="Good luck!" values="B6DE616F,B6DB7965,B7BABE46,B799E63B,B7E2165C,B796E13D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="FFFFA700,FFFFA70A,FFFFA715,FFFFA71F,FFFFA729,FFFFA733"/>
+<hostscript><script id="clock-skew" output="mean: 13h29m59s, deviation: 3h32m07s, median: 10h59m59s"><elem key="stddev">12727</elem>
+<elem key="median">39599</elem>
+<elem key="mean">48599</elem>
+<elem key="count">2</elem>
+</script><script id="nbstat" output="NetBIOS name: KIOPTRIX4, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  KIOPTRIX4&lt;00&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX4&lt;03&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX4&lt;20&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.28a)&#xa;  Computer name: Kioptrix4&#xa;  NetBIOS computer name: &#xa;  Domain name: localdomain&#xa;  FQDN: Kioptrix4.localdomain&#xa;  System time: 2020-01-10T15:41:28-05:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.28a</elem>
+<elem key="server"></elem>
+<elem key="date">2020-01-10T15:41:28-05:00</elem>
+<elem key="fqdn">Kioptrix4.localdomain</elem>
+<elem key="domain_dns">localdomain</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="264" rttvar="69" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1578649303"/>
+<taskend task="NSE" time="1578649303"/>
+<taskbegin task="NSE" time="1578649303"/>
+<taskend task="NSE" time="1578649303"/>
+<taskbegin task="NSE" time="1578649303"/>
+<taskend task="NSE" time="1578649303"/>
+<runstats><finished time="1578649303" timestr="Fri Jan 10 20:41:43 2020" elapsed="28.00" summary="Nmap done at Fri Jan 10 20:41:43 2020; 1 IP address (1 host up) scanned in 28.00 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

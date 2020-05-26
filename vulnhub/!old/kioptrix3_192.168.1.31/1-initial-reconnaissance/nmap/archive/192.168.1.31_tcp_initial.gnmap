@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Jan  9 18:32:19 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.31_tcp_initial 192.168.1.31
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.31 (kioptrix3.com)	Status: Up
+Host: 192.168.1.31 (kioptrix3.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///	Ignored State: closed (65533)
+# Nmap done at Thu Jan  9 18:32:24 2020 -- 1 IP address (1 host up) scanned in 5.19 seconds

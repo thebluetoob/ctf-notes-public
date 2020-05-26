@@ -1,0 +1,8 @@
+- Nikto v2.1.6/2.1.5
++ Target Host: 10.1.1.129
++ Target Port: 80
++ GET The anti-clickjacking X-Frame-Options header is not present.
++ GET The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ GET The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ OSVDB-3093: GET /.bashrc: User home dir was found with a shell rc file. This may reveal file and path information.
++ OSVDB-3093: GET /.profile: User home dir with a shell profile was found. May reveal directory information and system configuration.

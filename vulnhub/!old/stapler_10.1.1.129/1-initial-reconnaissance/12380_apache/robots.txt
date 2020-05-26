@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin112233/
+Disallow: /blogblog/

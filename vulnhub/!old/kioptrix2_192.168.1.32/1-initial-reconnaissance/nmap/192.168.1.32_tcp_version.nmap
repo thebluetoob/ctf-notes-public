@@ -1,0 +1,54 @@
+# Nmap 7.80 scan initiated Fri Jan 10 19:50:48 2020 as: nmap -sS -sV -sC -O -p22,80,111,443,631,812,3306 -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.32_tcp_version 192.168.1.32
+Nmap scan report for 192.168.1.32
+Host is up, received arp-response (0.00033s latency).
+
+PORT     STATE SERVICE    REASON         VERSION
+22/tcp   open  ssh        syn-ack ttl 64 OpenSSH 3.9p1 (protocol 1.99)
+| ssh-hostkey: 
+|   1024 8f:3e:8b:1e:58:63:fe:cf:27:a3:18:09:3b:52:cf:72 (RSA1)
+|   1024 34:6b:45:3d:ba:ce:ca:b2:53:55:ef:1e:43:70:38:36 (DSA)
+|_  1024 68:4d:8c:bb:b6:5a:bd:79:71:b8:71:47:ea:00:42:61 (RSA)
+|_sshv1: Server supports SSHv1
+80/tcp   open  http       syn-ack ttl 64 Apache httpd 2.0.52 ((CentOS))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+111/tcp  open  rpcbind    syn-ack ttl 64 2 (RPC #100000)
+443/tcp  open  ssl/https? syn-ack ttl 64
+|_ssl-date: 2020-01-11T00:51:51+00:00; +16h00m13s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+631/tcp  open  ipp        syn-ack ttl 64 CUPS 1.1
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS POST PUT
+|_  Potentially risky methods: PUT
+|_http-server-header: CUPS/1.1
+|_http-title: 403 Forbidden
+812/tcp  open  status     syn-ack ttl 64 1 (RPC #100024)
+3306/tcp open  mysql      syn-ack ttl 64 MySQL (unauthorized)
+MAC Address: 00:0C:29:C7:BD:E1 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.30
+Uptime guess: 49.709 days (since Fri Nov 22 02:52:09 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=198 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+Host script results:
+|_clock-skew: 16h00m12s
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan 10 19:52:37 2020 -- 1 IP address (1 host up) scanned in 108.69 seconds

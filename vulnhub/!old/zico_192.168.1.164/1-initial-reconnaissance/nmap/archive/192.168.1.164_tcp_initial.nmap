@@ -1,0 +1,14 @@
+# Nmap 7.70 scan initiated Fri May 15 18:01:31 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.164_tcp_initial 192.168.1.164
+Nmap scan report for zico.localdomain (192.168.1.164)
+Host is up, received arp-response (0.00039s latency).
+Not shown: 65531 closed ports
+Reason: 65531 resets
+PORT      STATE SERVICE REASON
+22/tcp    open  ssh     syn-ack ttl 64
+80/tcp    open  http    syn-ack ttl 64
+111/tcp   open  rpcbind syn-ack ttl 64
+58696/tcp open  unknown syn-ack ttl 64
+MAC Address: 00:0C:29:2B:AD:8D (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Fri May 15 18:01:33 2020 -- 1 IP address (1 host up) scanned in 1.77 seconds

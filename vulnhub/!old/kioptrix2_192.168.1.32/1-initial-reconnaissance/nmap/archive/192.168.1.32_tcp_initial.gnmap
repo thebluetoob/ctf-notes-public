@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Fri Jan 10 19:50:43 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.32_tcp_initial 192.168.1.32
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.32 ()	Status: Up
+Host: 192.168.1.32 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 443/open/tcp//https///, 631/open/tcp//ipp///, 812/open/tcp//unknown///, 3306/open/tcp//mysql///	Ignored State: closed (65528)
+# Nmap done at Fri Jan 10 19:50:48 2020 -- 1 IP address (1 host up) scanned in 5.09 seconds

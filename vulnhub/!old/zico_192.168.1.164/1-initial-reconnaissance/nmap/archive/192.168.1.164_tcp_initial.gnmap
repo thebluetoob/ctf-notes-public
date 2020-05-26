@@ -1,0 +1,5 @@
+# Nmap 7.70 scan initiated Fri May 15 18:01:31 2020 as: nmap -sS -p- -T4 -Pn -v --reason --open --stylesheet=/usr/share/nmap/nmap.xsl -oA ./1-initial-reconnaissance/nmap/192.168.1.164_tcp_initial 192.168.1.164
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 192.168.1.164 (zico.localdomain)	Status: Up
+Host: 192.168.1.164 (zico.localdomain)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 58696/open/tcp/////	Ignored State: closed (65531)
+# Nmap done at Fri May 15 18:01:33 2020 -- 1 IP address (1 host up) scanned in 1.77 seconds
